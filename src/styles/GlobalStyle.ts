@@ -20,8 +20,14 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background: ${props => props.theme.background};
-    color: ${props => props.theme.text};
+    background: ${
+      // @ts-ignore
+      props => props.theme.background
+    };
+    color: ${
+      // @ts-ignore
+      props => props.theme.text
+    };
   }
 
   body, input, textarea, button {
