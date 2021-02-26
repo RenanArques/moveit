@@ -1,7 +1,5 @@
 import { ThemeProvider } from 'styled-components'
 
-import { ChallengesProvider } from '../contexts/ChallengesContext'
-
 import GlobalStyle from '../styles/GlobalStyle'
 
 function MyApp({ Component, pageProps }) {
@@ -21,10 +19,8 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <ThemeProvider theme={lightTheme}>
-      <ChallengesProvider>
-        <GlobalStyle />
-        <Component {...pageProps} />
-      </ChallengesProvider>
+      <GlobalStyle />
+      <Component {...pageProps} />
     </ThemeProvider>
   )
 }

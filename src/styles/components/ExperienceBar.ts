@@ -22,7 +22,7 @@ export const ProgressBar = styled.div<ProgressBarProps>`
   position: relative;
 
   div {
-    width: ${props => props.progress};
+    width: ${props => props.progress === 'NaN%' ? '0%' : props.progress};
     margin: 0;
     height: 4px;
     border-radius: 4px;
